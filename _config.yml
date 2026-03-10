@@ -14,12 +14,8 @@ timezone: Asia/Shanghai
 theme: Minima
 
 # Markdown 渲染
-markdown: kramdown
+markdown: GFM
 highlighter: rouge
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 # permalink 格式
 permalink: /:categories/:year/:month/:day/:title/
