@@ -9,23 +9,56 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css">
 
 <style>
+    body {
+        margin: 0;
+        font-family: system-ui;
+        background: #ffffff;
+    }
 
-body {
-  margin: 0;
-  background: #ffffff;
-}
+    /* 顶部导航 */
+    .navbar {
+        border-bottom: 1px solid #eee;
+        padding: 12px 20px;
+    }
 
-.markdown-body {
-  box-sizing: border-box;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 40px;
-}
+    .navbar a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #333;
+    }
 
-@media (max-width: 767px) {
-  .markdown-body {
-    padding: 20px;
-  }
+    /* 页面主体 */
+    .markdown-body {
+        box-sizing: border-box;
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 40px;
+    }
+
+    /* GitHub 按钮 */
+    .github-edit {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* 目录 */
+    .toc {
+        border-left: 4px solid #e1e4e8;
+        padding-left: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* 深色模式 */
+    @media (prefers-color-scheme: dark) {
+
+    body {
+        background: #0d1117;
+    }
+
+    .markdown-body {
+        background: #0d1117;
+        color: #c9d1d9;
+    }
 }
 
 </style>
@@ -34,9 +67,26 @@ body {
 
 <body>
 
-<article class="markdown-body">
-{{ content }}
-</article>
+    <div class="navbar">
+        {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endfor %}
+    </div>
+
+    <article class="markdown-body">
+
+        {% if page.collection == "posts" %}
+
+            <div class="github-edit">
+            <a href="{{ site.github.repo }}/edit/{{ site.github.branch }}/{{ page.path }}">
+            Edit on GitHub
+            </a>
+            </div>
+
+        {% endif %}
+
+        {{ content }}
+
+    </article>
 
 </body>
-</html>
