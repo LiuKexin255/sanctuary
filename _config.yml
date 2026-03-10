@@ -11,7 +11,7 @@ baseurl: "/sanctuary"
 timezone: Asia/Shanghai
 
 # 主题（GitHub Pages 默认支持）
-theme: Minima
+theme: jekyll-theme-cayman
 
 # Markdown 渲染
 markdown: kramdown
