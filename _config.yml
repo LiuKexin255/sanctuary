@@ -46,8 +46,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-
-# 包含目录
-include:
-  - _posts
-  - docs
