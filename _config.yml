@@ -49,4 +49,5 @@ exclude:
 
 # 包含目录
 include:
+  - _posts
   - docs
