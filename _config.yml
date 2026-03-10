@@ -43,3 +43,7 @@ defaults:
 # 排除不发布的文件
 exclude:
   - README.md
+
+github:
+  repo: https://github.com/LiuKexin255/sanctuary
+  branch: master
