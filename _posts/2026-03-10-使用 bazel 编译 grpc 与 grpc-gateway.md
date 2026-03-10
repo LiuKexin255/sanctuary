@@ -1,3 +1,5 @@
+{% include github-link.html %}
+
 ## 目录
 
 * TOC
