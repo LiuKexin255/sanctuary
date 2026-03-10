@@ -11,11 +11,15 @@ baseurl: "/sanctuary"
 timezone: Asia/Shanghai
 
 # 主题（GitHub Pages 默认支持）
-theme: minima
+theme: Cayman
 
 # Markdown 渲染
 markdown: kramdown
 highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # permalink 格式
 permalink: /:categories/:year/:month/:day/:title/
