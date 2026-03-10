@@ -4,8 +4,7 @@ author: Liu Kexin
 email: liukx.acefd@qq.com
 
 # 网站地址
-url: "https://liukexin255.github.io/"
-baseurl: "/sanctuary" 
+url: "https://liukexin255.github.io/sanctuary"
 
 # 时区
 timezone: Asia/Shanghai
@@ -43,6 +42,3 @@ defaults:
 # 排除不发布的文件
 exclude:
   - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
