@@ -4,7 +4,8 @@ author: Liu Kexin
 email: liukx.acefd@qq.com
 
 # 网站地址
-url: "https://liukexin255.github.io/sanctuary"
+url: "https://liukexin255.github.io/"
+baseurl: "/sanctuary" 
 
 # 时区
 timezone: Asia/Shanghai
