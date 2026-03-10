@@ -31,6 +31,15 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
+# 默认 Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Your Name
+
 # 排除不发布的文件
 exclude:
   - README.md
