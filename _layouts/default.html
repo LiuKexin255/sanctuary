@@ -1,11 +1,37 @@
-<header>
-  <nav class="site-nav">
-    <ul>
-      {% for item in site.data.navigation %}
-      <li>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <style>
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="site-nav">
+      <ul>
+        {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
