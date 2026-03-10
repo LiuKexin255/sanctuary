@@ -1,0 +1,55 @@
+title: Liukexin's Sanctuary
+description: 个人学习&实践笔记
+author: Liu Kexin
+email: liukx.acefd@qq.com
+
+# 网站地址
+url: "https://liukexin255.github.io/"
+baseurl: "sanctuary" 
+
+# 时区
+timezone: Asia/Shanghai
+
+# 主题（GitHub Pages 默认支持）
+theme: minima
+
+# Markdown 渲染
+markdown: kramdown
+highlighter: rouge
+
+# permalink 格式
+permalink: /:categories/:year/:month/:day/:title/
+
+# 首页文章数量
+paginate: 10
+paginate_path: "/page:num/"
+
+# 插件（GitHub Pages 支持的）
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# 默认 Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Your Name
+
+# 排除不发布的文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# 包含目录
+include:
+  - /
+
+# SEO
+lang: cn
